@@ -3,33 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tamukedde Jacob</title>
+  <title>Tamukedde Jacob — Creative Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!--Backdrop Over lay for mobile menu-->
+  <!-- Backdrop overlay for mobile menu -->
   <div class="menu-backdrop"></div>
 
-  <nav>
-    <div class ="navbar"> 
-        <a href="a" class="logo">My brand</a>
-        <ul>
-          <Li><a href="#home">Home</a></Li>
-          <Li><a href="#about">About</a></Li>
-          <Li><a href="#service">service</a></Li>
-          <Li><a href="cv">cv</a></Li>
-          <Li><a href="contact">contact</a></Li>
-        </ul>
-        <div class="Hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
-     </div>
-      
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">TJ</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
-  <div class="content">
-    <h1>HI, AM TAMUKEDDE JACOB</h1>
-  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-label">Creative Developer</div>
+      <h1 class="hero-title">
+        <span class="line">Tamukedde</span>
+        <span class="line">Jacob</span>
+      </h1>
+      <p class="hero-subtitle">Crafting digital experiences that blend aesthetics with functionality</p>
+      <a href="#contact" class="cta-button">Let's Work Together</a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">I'm a passionate developer who loves creating beautiful, functional websites that make an impact.</p>
+          <p>With expertise in modern web technologies, I transform ideas into elegant digital solutions. My approach combines clean code with thoughtful design, ensuring every project not only looks great but performs flawlessly.</p>
+          <p>I believe in the power of collaboration and continuous learning, always staying current with the latest industry trends and best practices.</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills">
+          <h3>Skills & Expertise</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">⚡</div>
+              <h4>Frontend Development</h4>
+              <p>HTML, CSS, JavaScript, React, Vue.js</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🎨</div>
+              <h4>UI/UX Design</h4>
+              <p>Figma, Adobe XD, Responsive Design</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h4>Backend Development</h4>
+              <p>Node.js, Python, Database Design</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🚀</div>
+              <h4>Performance</h4>
+              <p>Optimization, SEO, Accessibility</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Selected Work</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Web Design</span>
+            <h3 class="project-title">E-commerce Platform</h3>
+            <p class="project-description">A modern online shopping experience with seamless checkout and intuitive navigation.</p>
+          </div>
+        </article>
+        
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Web Application</span>
+            <h3 class="project-title">Task Management App</h3>
+            <p class="project-description">Collaborative tool designed to streamline team workflows and boost productivity.</p>
+          </div>
+        </article>
+        
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Brand Identity</span>
+            <h3 class="project-title">Corporate Website</h3>
+            <p class="project-description">Professional web presence reflecting company values with elegant design and clear messaging.</p>
+          </div>
+        </article>
+        
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Mobile First</span>
+            <h3 class="project-title">Restaurant Booking</h3>
+            <p class="project-description">Responsive platform making reservations effortless with real-time availability.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item">
+          <div class="service-number">01</div>
+          <div class="service-content">
+            <h3>Web Development</h3>
+            <p>Custom websites built with modern technologies, optimized for performance and user experience.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">02</div>
+          <div class="service-content">
+            <h3>UI/UX Design</h3>
+            <p>User-centered design solutions that balance aesthetics with functionality and accessibility.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">03</div>
+          <div class="service-content">
+            <h3>E-commerce Solutions</h3>
+            <p>Complete online store development with secure payment integration and inventory management.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">04</div>
+          <div class="service-content">
+            <h3>Website Maintenance</h3>
+            <p>Ongoing support, updates, and optimization to keep your website running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-lead">Have a project in mind? Let's create something extraordinary together.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:jacob@example.com">jacob@example.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+256700000000">+256 700 000 000</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span>Kampala, Uganda</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">GitHub</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Dribbble</a>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Tamukedde Jacob. All rights reserved.</p>
+        <a href="#cv" class="cv-link">Download CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
