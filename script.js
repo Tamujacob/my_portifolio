@@ -204,50 +204,9 @@ projectCards.forEach(card => {
   });
 });
 
-// ===== Cursor Custom Effect (optional enhancement) =====
-function createCustomCursor() {
-  const cursor = document.createElement('div');
-  cursor.classList.add('custom-cursor');
-  cursor.style.cssText = `
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.1s ease;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-  `;
-  document.body.appendChild(cursor);
-  
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-  });
-  
-  // Expand cursor on clickable elements
-  const clickables = document.querySelectorAll('a, button, .project-card');
-  clickables.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.width = '40px';
-      cursor.style.height = '40px';
-      cursor.style.borderWidth = '1px';
-    });
-    
-    el.addEventListener('mouseleave', () => {
-      cursor.style.width = '20px';
-      cursor.style.height = '20px';
-      cursor.style.borderWidth = '2px';
-    });
-  });
-}
-
-// Only create custom cursor on desktop devices
-if (window.innerWidth > 768) {
-  createCustomCursor();
-}
+// ===== Cursor Custom Effect (REMOVED) =====
+// Custom cursor effect has been disabled
+// If you want to enable it, uncomment the code below
 
 // ===== Typing Effect for Hero Title (optional) =====
 function typeWriter(element, text, speed = 100) {
