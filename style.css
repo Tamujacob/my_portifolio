@@ -960,33 +960,40 @@ section {
   align-items: stretch;
 }
 
+/* Contact Content Layout - 3 Columns */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr; /* Increased center width slightly for more presence */
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
 /* CENTER TEXT SECTION WITH WHITE FRAME */
 .contact-center-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly; /* Better vertical distribution */
   align-items: center;
-  gap: 2rem;
-  padding: 2.5rem 3rem 3rem 3rem;
+  padding: 4rem 2.5rem; /* Increased top/bottom padding to fill the height */
   background: white;
   border: 4px solid var(--accent);
   border-radius: 16px;
   box-shadow: 0 15px 50px rgba(212, 165, 116, 0.3);
   position: relative;
   overflow: hidden;
-  align-self: stretch;
 }
 
-/* Photo at the top of the frame */
+/* Photo at the top - INCREASED SIZE */
 .center-photo {
-  width: 120px;
-  height: 120px;
+  width: 180px;  /* Increased from 120px */
+  height: 180px; /* Increased from 120px */
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid var(--accent);
-  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+  border: 6px solid var(--accent); /* Thicker border for better scale */
+  box-shadow: 0 12px 30px rgba(212, 165, 116, 0.4);
   flex-shrink: 0;
-  margin-bottom: 0.5rem;
+  z-index: 2;
+  margin-bottom: 1rem;
 }
 
 .center-photo img {
@@ -996,104 +1003,62 @@ section {
   display: block;
 }
 
-/* Decorative gradient background */
-.contact-center-text::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
-  z-index: 0;
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
 }
 
 .build-together-title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-size: clamp(2.5rem, 5vw, 4.2rem); /* Slightly larger text */
   font-weight: 700;
   background: linear-gradient(135deg, #d4a574 0%, #b88a5f 50%, #d4a574 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.1;
+  line-height: 1.05;
   margin: 0;
-  position: relative;
-  z-index: 1;
   text-align: center;
 }
 
 .availability-text {
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.25rem; /* Increased for better readability */
+  line-height: 1.6;
   color: #2d2d2d;
-  margin: 0;
-  position: relative;
-  z-index: 1;
+  margin: 0 auto;
+  max-width: 90%; /* Keeps text from hitting the edges */
   text-align: center;
-  font-weight: 400;
 }
 
-/* Highlight specific words in the availability text */
-.availability-text strong {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* Add some decorative dots */
-.contact-center-text::after {
-  content: '✦';
+/* Decorative star - handled as a div for cleaner positioning */
+.decorative-icon {
   position: absolute;
   bottom: 1.5rem;
   right: 2rem;
   font-size: 2.5rem;
   color: var(--accent);
   opacity: 0.15;
-  z-index: 0;
+  z-index: 1;
 }
 
-/* Responsive Design */
+/* Responsive Updates */
 @media (max-width: 1200px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  
-  .contact-center-text {
-    order: -1;
-    padding: 3rem 2rem;
   }
   
   .center-photo {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .build-together-title {
-    font-size: 2.8rem;
-  }
-  
-  .availability-text {
-    font-size: 1.1rem;
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (max-width: 768px) {
-  .contact-center-text {
-    padding: 2.5rem 1.5rem;
-  }
-  
   .center-photo {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .build-together-title {
-    font-size: 2rem;
-  }
-  
-  .availability-text {
-    font-size: 1rem;
+    width: 130px;
+    height: 130px;
   }
 }
 
