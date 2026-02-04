@@ -952,6 +952,66 @@ section {
     height: 300px;
   }
 }
+/* Contact Content Layout - 3 Columns */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* CENTER TEXT SECTION */
+.contact-center-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.build-together-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.availability-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .contact-center-text {
+    order: -1; /* Move to top on mobile */
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .build-together-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .build-together-title {
+    font-size: 2rem;
+  }
+  
+  .availability-text {
+    font-size: 1rem;
+  }
+}
 
 /* ===== ICON STYLING WITH COLORS ===== */
 
@@ -1223,4 +1283,83 @@ section {
     height: 45px;
     font-size: 1.1rem;
   }
+}
+
+/* Form Label Wrapper (Icon + Text Label) */
+.form-label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.form-label-wrapper i {
+  font-size: 1.2rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+/* Individual Form Icon Colors */
+.form-group:nth-child(1) .form-label-wrapper i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.form-group:nth-child(2) .form-label-wrapper i {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.form-group:nth-child(3) .form-label-wrapper i {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.form-field-label {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Form Group Spacing */
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+/* Remove old label styles if they exist */
+.form-group label {
+  display: none;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+  border-radius: 8px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-tertiary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
 }
