@@ -8,8 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <!-- Backdrop overlay for mobile menu -->
@@ -214,85 +213,119 @@
     </div>
   </section>
 
- <!-- Contact Section -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-number">04</span>
-      <h2 class="section-title">Get In Touch</h2>
-    </div>
-    <div class="contact-content">
-      <div class="contact-info">
-        <p class="contact-lead">Have a project in mind? Let's create something extraordinary together.</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="material-icons">email</span>
-            <div class="contact-text">
-              <span class="contact-label">Email</span>
-              <a href="mailto:jacob@example.com">jacob@example.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="material-icons">phone</span>
-            <div class="contact-text">
-              <span class="contact-label">Phone</span>
-              <a href="tel:+256700000000">+256 700 000 000</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="material-icons">location_on</span>
-            <div class="contact-text">
-              <span class="contact-label">Location</span>
-              <span>Kampala, Uganda</span>
-            </div>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-link">
-            <span class="material-icons">business_center</span>
-            <span>LinkedIn</span>
-          </a>
-          <a href="#" class="social-link">
-            <span class="material-icons">code</span>
-            <span>GitHub</span>
-          </a>
-          <a href="#" class="social-link">
-            <span class="material-icons">tag</span>
-            <span>Twitter</span>
-          </a>
-          <a href="#" class="social-link">
-            <span class="material-icons">palette</span>
-            <span>Dribbble</span>
-          </a>
-        </div>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Get In Touch</h2>
       </div>
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">
-            <span class="material-icons">person</span>
-            Your Name
-          </label>
-          <input type="text" id="name" placeholder="Enter your name" required>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-lead">Have a project in mind? Let's create something extraordinary together.</p>
+          
+          <!-- Contact Details with Icons -->
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <a href="mailto:jacob@example.com">jacob@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+256700000000">+256 700 000 000</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Location</span>
+                <span>Kampala, Uganda</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Links with Boxed Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link linkedin">
+              <div class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <span>LinkedIn</span>
+            </a>
+            <a href="#" class="social-link github">
+              <div class="social-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <span>GitHub</span>
+            </a>
+            <a href="#" class="social-link twitter">
+              <div class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </div>
+              <span>Twitter</span>
+            </a>
+            <a href="#" class="social-link dribbble">
+              <div class="social-icon">
+                <i class="fab fa-dribbble"></i>
+              </div>
+              <span>Dribbble</span>
+            </a>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">
-            <span class="material-icons">email</span>
-            Your Email
-          </label>
-          <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">
-            <span class="material-icons">message</span>
-            Your Message
-          </label>
-          <textarea id="message" rows="6" placeholder="Enter your message" required></textarea>
-        </div>
-        <button type="submit" class="submit-button">
-          <span class="material-icons">send</span>
-          Send Message
-        </button>
-      </form>
+        
+        <!-- Contact Form with Icons -->
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">
+              <i class="fas fa-user"></i>
+              Your Name
+            </label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Your Email
+            </label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">
+              <i class="fas fa-comment"></i>
+              Your Message
+            </label>
+            <textarea id="message" rows="6" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Tamukedde Jacob. All rights reserved.</p>
+        <a href="#cv" class="cv-link">Download CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
