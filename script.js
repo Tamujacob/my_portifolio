@@ -171,13 +171,13 @@ createScrollProgress();
 
 // ===== Parallax Effect for Hero Section =====
 const hero = document.querySelector('.hero');
-const heroContent = document.querySelector('.hero-content');
+const heroContainer = document.querySelector('.hero-container');
 
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
-  if (scrolled < window.innerHeight) {
-    heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-    heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+  if (scrolled < window.innerHeight && heroContainer) {
+    heroContainer.style.transform = `translateY(${scrolled * 0.5}px)`;
+    heroContainer.style.opacity = 1 - (scrolled / window.innerHeight);
   }
 });
 
