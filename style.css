@@ -165,14 +165,14 @@ body {
   opacity: 1;
 }
 
-/* ===== Hero Section ===== */
+/* Update the hero section */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0 5%;
+  padding: 8rem 5% 5rem 5%; /* Added top padding to give more space */
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
@@ -198,6 +198,7 @@ body {
   width: 100%;
   z-index: 1;
   animation: fadeInUp 1s ease-out;
+  margin-top: 2rem; /* Added margin to push content down */
 }
 
 .hero-content {
@@ -207,12 +208,16 @@ body {
 .hero-image {
   position: relative;
   animation: fadeIn 1s ease-out 0.3s both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 450px; /* Reduced max width slightly */
   height: auto;
+  object-fit: contain; /* Changed to contain to show full image */
   border-radius: 8px;
   border: 3px solid var(--accent);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
