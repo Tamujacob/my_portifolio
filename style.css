@@ -876,8 +876,14 @@ section {
   background: rgba(242, 78, 30, 0.1);
 }
 
-.skill-tech-item.word {
-  border-color: #2B579A;
+.skill-tech-item.mongodb {
+  border-color: #47A248;
+}
+.skill-tech-item.mongodb i {
+  color: #47A248;
+}
+.skill-tech-item.mongodb:hover {
+  background: rgba(71, 162, 72, 0.1);
 }
 .skill-tech-item.word i {
   color: #2B579A;
