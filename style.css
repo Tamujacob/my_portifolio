@@ -637,6 +637,223 @@ section {
   line-height: 1.8;
   max-width: 800px;
 }
+/* ===== Resume Section ===== */
+.resume {
+  background: var(--bg-primary);
+  padding: 8rem 0;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.resume-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.resume-section {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.resume-section:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.resume-section-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-section-title i {
+  font-size: 1.5rem;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.resume-item-header h4 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  flex: 1;
+}
+
+.resume-date {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+
+.resume-location {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.resume-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-details li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.resume-details li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Skills Tags */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: var(--bg-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: default;
+  box-shadow: 0 4px 10px rgba(212, 165, 116, 0.2);
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(212, 165, 116, 0.4);
+}
+
+.skill-tag.secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.skill-tag.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Download CV Button */
+.resume-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.download-cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 3rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+}
+
+.download-cv-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5);
+  background: var(--accent-dark);
+}
+
+.download-cv-button i {
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.download-cv-button:hover i {
+  transform: translateY(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .resume-section-title {
+    font-size: 1.5rem;
+  }
+
+  .resume-item-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resume-date {
+    align-self: flex-start;
+  }
+
+  .download-cv-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
 
 /* ===== Contact Section ===== */
 .contact {
