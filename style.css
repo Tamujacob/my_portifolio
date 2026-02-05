@@ -750,39 +750,173 @@ section {
   font-weight: bold;
 }
 
-/* Skills Tags */
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+/* Technical Skills Grid with Colored Icons */
+.tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
-.skill-tag {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-  color: var(--bg-primary);
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
+.skill-tech-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.skill-tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-tech-item i {
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.skill-tech-item span {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Individual Technology Colors */
+.skill-tech-item.html {
+  border-color: #E34F26;
+}
+.skill-tech-item.html i {
+  color: #E34F26;
+}
+.skill-tech-item.html:hover {
+  background: rgba(227, 79, 38, 0.1);
+}
+
+.skill-tech-item.css {
+  border-color: #1572B6;
+}
+.skill-tech-item.css i {
+  color: #1572B6;
+}
+.skill-tech-item.css:hover {
+  background: rgba(21, 114, 182, 0.1);
+}
+
+.skill-tech-item.javascript {
+  border-color: #F7DF1E;
+}
+.skill-tech-item.javascript i {
+  color: #F7DF1E;
+}
+.skill-tech-item.javascript:hover {
+  background: rgba(247, 223, 30, 0.1);
+}
+
+.skill-tech-item.react {
+  border-color: #61DAFB;
+}
+.skill-tech-item.react i {
+  color: #61DAFB;
+}
+.skill-tech-item.react:hover {
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.skill-tech-item.python {
+  border-color: #3776AB;
+}
+.skill-tech-item.python i {
+  color: #3776AB;
+}
+.skill-tech-item.python:hover {
+  background: rgba(55, 118, 171, 0.1);
+}
+
+.skill-tech-item.java {
+  border-color: #007396;
+}
+.skill-tech-item.java i {
+  color: #007396;
+}
+.skill-tech-item.java:hover {
+  background: rgba(0, 115, 150, 0.1);
+}
+
+.skill-tech-item.django {
+  border-color: #092E20;
+}
+.skill-tech-item.django i {
+  color: #44B78B;
+}
+.skill-tech-item.django:hover {
+  background: rgba(68, 183, 139, 0.1);
+}
+
+.skill-tech-item.tkinter {
+  border-color: #FFD43B;
+}
+.skill-tech-item.tkinter i {
+  color: #FFD43B;
+}
+.skill-tech-item.tkinter:hover {
+  background: rgba(255, 212, 59, 0.1);
+}
+
+.skill-tech-item.figma {
+  border-color: #F24E1E;
+}
+.skill-tech-item.figma i {
+  color: #F24E1E;
+}
+.skill-tech-item.figma:hover {
+  background: rgba(242, 78, 30, 0.1);
+}
+
+.skill-tech-item.word {
+  border-color: #2B579A;
+}
+.skill-tech-item.word i {
+  color: #2B579A;
+}
+.skill-tech-item.word:hover {
+  background: rgba(43, 87, 154, 0.1);
+}
+
+/* Soft Skills Tags */
+.skills-tags-soft {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-tag-soft {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: var(--transition);
   cursor: default;
-  box-shadow: 0 4px 10px rgba(212, 165, 116, 0.2);
-}
-
-.skill-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(212, 165, 116, 0.4);
-}
-
-.skill-tag.secondary {
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
   border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-.skill-tag.secondary:hover {
-  border-color: var(--accent);
+.skill-tag-soft i {
   color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.skill-tag-soft:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(212, 165, 116, 0.2);
 }
 
 /* Download CV Button */
@@ -829,6 +963,10 @@ section {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  
+  .tech-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -847,6 +985,14 @@ section {
 
   .resume-date {
     align-self: flex-start;
+  }
+
+  .tech-skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-tags-soft {
+    grid-template-columns: 1fr;
   }
 
   .download-cv-button {
