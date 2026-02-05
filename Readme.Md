@@ -44,12 +44,12 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/Tamujaco/my_portfolio.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd portfolio
+cd my_portfolio
 ```
 
 3. Open `index.html` in your browser or use a local server:
@@ -166,8 +166,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For any inquiries or collaboration opportunities:
 
-- 📧 Email: jacob@example.com
-- 📱 Phone: +256 700 000 000
+- 📧 Email: jacobtamukedde@gmail.com
+- 📱 Phone: +256 787022284
 - 📍 Location: Kampala, Uganda
 
 ---
