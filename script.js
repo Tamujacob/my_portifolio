@@ -141,8 +141,7 @@ contactForm.addEventListener('submit', (e) => {
     submitButton.style.color = 'var(--accent)';
   }, 3000);
   
-  // Here you would typically send the data to a server
-  // Example: fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
+  
 });
 
 // ===== Scroll Progress Indicator (optional enhancement) =====
@@ -204,9 +203,6 @@ projectCards.forEach(card => {
   });
 });
 
-// ===== Cursor Custom Effect (REMOVED) =====
-// Custom cursor effect has been disabled
-// If you want to enable it, uncomment the code below
 
 // ===== Typing Effect for Hero Title (optional) =====
 function typeWriter(element, text, speed = 100) {
