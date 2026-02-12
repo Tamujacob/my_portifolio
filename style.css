@@ -79,6 +79,24 @@ body {
   transition: var(--transition);
 }
 
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 85px; 
+    height: 100%;
+}
+
+.main-logo {
+    width: 85px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    z-index: 10;
+}
+
 .logo:hover {
   color: var(--text-primary);
   transform: scale(1.05);
