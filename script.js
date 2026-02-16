@@ -143,39 +143,7 @@ animateElements.forEach(element => {
   observer.observe(element);
 });
 
-// ===== Form Submission =====
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value
-  };
-  
-  console.log('Form submitted:', formData);
-  
-  // Show success message
-  const submitButton = contactForm.querySelector('.submit-button');
-  const originalText = submitButton.textContent;
-  submitButton.textContent = 'Message Sent!';
-  submitButton.style.background = 'var(--accent)';
-  submitButton.style.color = 'var(--bg-primary)';
-  
-  // Reset form
-  setTimeout(() => {
-    contactForm.reset();
-    submitButton.textContent = originalText;
-    submitButton.style.background = 'transparent';
-    submitButton.style.color = 'var(--accent)';
-  }, 3000);
-  
-  
-});
-
-// ===== Scroll Progress Indicator (optional enhancement) =====
+// ===== Scroll Progress Indicator =====
 function createScrollProgress() {
   const progressBar = document.createElement('div');
   progressBar.style.cssText = `
@@ -211,7 +179,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ===== Project Card Tilt Effect (optional enhancement) =====
+// ===== Project Card Tilt Effect =====
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
@@ -234,29 +202,9 @@ projectCards.forEach(card => {
   });
 });
 
-
-// ===== Typing Effect for Hero Title (optional) =====
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.textContent = '';
-  
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-  
-  type();
-}
-
 // ===== Initialize on Page Load =====
 window.addEventListener('load', () => {
-  // Remove any loading screens if you add them
   document.body.classList.add('loaded');
-  
-  // Set initial active link
   setActiveLink();
 });
 
@@ -265,18 +213,75 @@ let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
-    // Close mobile menu if window is resized to desktop
     if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
       toggleMenu();
     }
   }, 250);
 });
 
-// ===== Prevent Scroll When Menu is Open =====
-window.addEventListener('scroll', () => {
-  if (navLinks.classList.contains('active')) {
-    window.scrollTo(0, 0);
-  }
-});
+// ===== Contact Form Submission with Formspree =====
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const buttonText = document.getElementById('button-text');
 
-console.log('Portfolio initialized successfully! 🚀');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitButton = this.querySelector('.submit-button');
+    const formData = new FormData(this);
+    
+    // Show loading state
+    buttonText.textContent = 'Sending...';
+    submitButton.disabled = true;
+    formStatus.style.display = 'none';
+    
+    try {
+      // Send to Formspree
+      const response = await fetch('https://formspree.io/f/mykdjjbj', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Success
+        formStatus.innerHTML = '✓ Message sent successfully! I\'ll get back to you soon.';
+        formStatus.style.display = 'block';
+        formStatus.style.backgroundColor = '#4CAF50';
+        formStatus.style.color = 'white';
+        
+        buttonText.textContent = 'Message Sent!';
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Reset button after 5 seconds
+        setTimeout(() => {
+          buttonText.textContent = 'Send Message';
+          submitButton.disabled = false;
+          formStatus.style.display = 'none';
+        }, 5000);
+        
+      } else {
+        throw new Error('Form submission failed');
+      }
+      
+    } catch (error) {
+      // Error
+      formStatus.innerHTML = '✗ Oops! Something went wrong. Please try again or email me directly.';
+      formStatus.style.display = 'block';
+      formStatus.style.backgroundColor = '#f44336';
+      formStatus.style.color = 'white';
+      
+      buttonText.textContent = 'Send Message';
+      submitButton.disabled = false;
+      
+      console.error('Error:', error);
+    }
+  });
+}
+
+console.log('Portfolio initialized successfully!');

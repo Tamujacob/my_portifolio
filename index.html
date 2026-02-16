@@ -159,7 +159,7 @@
       <article class="project-card">
         <div class="project-image" style="background-image: url('portifolio.png');">
           <div class="project-overlay">
-            <a href="https://github.com/Tamujacob/my_portifolio" class="project-link">View Project →</a>
+            <a href="" class="project-link">View Project →</a>
           </div>
         </div>
         <div class="project-info">
@@ -546,39 +546,39 @@
         </div>
         
         <!-- RIGHT SIDE: Contact Form -->
-        <form class="contact-form">
-          <div class="form-group">
-            <div class="form-label-wrapper">
-              <i class="fas fa-user"></i>
-              <span class="form-field-label">Your Name</span>
-            </div>
-            <input type="text" id="name" placeholder="Enter your name" required>
-          </div>
-          
-          <div class="form-group">
-            <div class="form-label-wrapper">
-              <i class="fas fa-envelope"></i>
-              <span class="form-field-label">Your Email</span>
-            </div>
-            <input type="email" id="email" placeholder="Enter your email" required>
-          </div>
-          
-          <div class="form-group">
-            <div class="form-label-wrapper">
-              <i class="fas fa-comment"></i>
-              <span class="form-field-label">Your Message</span>
-            </div>
-            <textarea id="message" rows="6" placeholder="Enter your message" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-button">
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-          </button>
-        </form>
-      </div>
+<form class="contact-form" id="contact-form">
+  <div class="form-group">
+    <div class="form-label-wrapper">
+      <i class="fas fa-user"></i>
+      <span class="form-field-label">Your Name</span>
     </div>
-  </section>
+    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+  </div>
+  
+  <div class="form-group">
+    <div class="form-label-wrapper">
+      <i class="fas fa-envelope"></i>
+      <span class="form-field-label">Your Email</span>
+    </div>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+  </div>
+  
+  <div class="form-group">
+    <div class="form-label-wrapper">
+      <i class="fas fa-comment"></i>
+      <span class="form-field-label">Your Message</span>
+    </div>
+    <textarea name="message" id="message" rows="6" placeholder="Enter your message" required></textarea>
+  </div>
+  
+  <button type="submit" class="submit-button">
+    <i class="fas fa-paper-plane"></i>
+    <span id="button-text">Send Message</span>
+  </button>
+  
+  <!-- Success/Error Messages -->
+  <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
+</form>
 
   <!-- Footer -->
   <footer class="footer">

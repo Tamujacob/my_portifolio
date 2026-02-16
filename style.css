@@ -1951,3 +1951,22 @@ section {
   resize: vertical;
   min-height: 150px;
 }
+
+/* Form Status Messages */
+#form-status {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
