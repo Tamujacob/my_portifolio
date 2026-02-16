@@ -1176,6 +1176,29 @@ section {
     font-size: 1rem;
   }
 }
+/* Interests Section - Centered Below Columns */
+.resume-interests-section {
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-interests-section .resume-section {
+  text-align: left;
+}
+
+.resume-interests-section .resume-details {
+  columns: 2;
+  column-gap: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-interests-section .resume-details {
+    columns: 1;
+  }
+}
 
 /* ===== Contact Section ===== */
 .contact {
