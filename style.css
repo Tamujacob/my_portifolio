@@ -1818,28 +1818,7 @@ section {
   color: var(--accent);
 }
 
-/* Footer CV Link with Icon */
-.cv-link {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
-.cv-link i {
-  transition: var(--transition);
-}
-
-.cv-link:hover {
-  color: var(--text-primary);
-}
-
-.cv-link:hover i {
-  transform: translateY(-3px);
-}
 
 /* Scroll Indicator Icon Enhancement */
 .scroll-indicator {
@@ -1970,3 +1949,5 @@ section {
     transform: translateY(0);
   }
 }
+
+
