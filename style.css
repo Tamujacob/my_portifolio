@@ -611,30 +611,46 @@ section {
 /* ===== Work Section ===== */
 .work {
   background: var(--bg-primary);
+  padding: 8rem 0;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  margin-top: 3rem;
 }
 
 .project-card {
   cursor: pointer;
   transition: var(--transition);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
-  height: 400px;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border);
-  margin-bottom: 1.5rem;
   position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
+  transition: var(--transition);
+}
+
+/* Default gradient for cards without images */
+.project-image:not([style]) {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
 }
 
-.project-image::before {
+.project-image:not([style])::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -652,7 +668,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(212, 165, 116, 0.95);
+  background: rgba(212, 165, 116, 0.85); /* Semi-transparent gold overlay */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -671,12 +687,24 @@ section {
   text-decoration: none;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: 2px solid var(--bg-primary);
+  border-radius: 50px;
   transform: translateY(20px);
   transition: var(--transition);
 }
 
 .project-card:hover .project-link {
   transform: translateY(0);
+}
+
+.project-link:hover {
+  background: var(--bg-primary);
+  color: var(--accent);
+}
+
+.project-info {
+  padding: 2rem;
 }
 
 .project-category {
@@ -686,6 +714,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .project-title {
@@ -693,11 +722,39 @@ section {
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
   color: var(--text-primary);
+  line-height: 1.2;
 }
 
 .project-description {
   color: var(--text-secondary);
   line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-image {
+    height: 300px;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-info {
+    padding: 1.5rem;
+  }
+}
+/* Specific positioning for portfolio image to center the text */
+.project-card:nth-child(3) .project-image {
+  background-position: center 93%; /* Moves the image down to center the "Portfolio" text */
 }
 
 /* ===== Services Section ===== */
