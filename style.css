@@ -392,7 +392,7 @@ body.light-mode .contact-center-text {
     transform: translateX(-50px);
     opacity: 0;
   }
-  to {
+  to {    
     transform: translateX(0);
     opacity: 1;
   }
@@ -616,7 +616,7 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -731,15 +731,24 @@ section {
   font-size: 0.95rem;
 }
 
+/* Specific positioning for portfolio image to center the text */
+.project-card:nth-child(3) .project-image {
+  background-position: center 93%;
+}
+
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
   .project-image {
     height: 300px;
   }
@@ -752,11 +761,6 @@ section {
     padding: 1.5rem;
   }
 }
-/* Specific positioning for portfolio image to center the text */
-.project-card:nth-child(3) .project-image {
-  background-position: center 93%; /* Moves the image down to center the "Portfolio" text */
-}
-
 /* ===== Services Section ===== */
 .services {
   background: var(--bg-secondary);
