@@ -637,7 +637,7 @@ section {
 
 .project-image {
   position: relative;
-  height: 400px;
+  height: 255px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -731,7 +731,7 @@ section {
   font-size: 0.95rem;
 }
 
-/* Specific positioning for portfolio image to center the text */
+
 .project-card:nth-child(3) .project-image {
   background-position: center 93%;
 }
@@ -761,6 +761,7 @@ section {
     padding: 1.5rem;
   }
 }
+
 /* ===== Services Section ===== */
 .services {
   background: var(--bg-secondary);
